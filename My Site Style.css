@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------------MAIN---------------------*/
+
+html {
+    font-size: 10px;
+}
+
+
+
+body {
+    background-color: #F5F5F5;
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    /*animation: fadeIn 10s;*/
+  
+}
+
+.site-content-container {
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    /*from { opacity: 0; }
+    to { opacity: 1; }*/
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 0
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.intro-greeting {
+    position: absolute;
+    display: inline-block;
+    top: 40%;
+    left:0;
+    right: 0;
+    text-align: center;
+    font-size: 5rem;
+    animation: fadeInOut 4s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+        font-size: 5rem;
+    }
+    100% {
+        opacity: 0;
+        font-size: 0rem;
+    }
+}
+
+
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #000;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+strong {
+    color: #0099ff;
+    font-weight: 500;
+    transition: all .4s ease;
+}
+
+strong:hover {
+    color: inherit;
+}
+/*---------------------HEADER---------------------*/
+
+header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2% 5%;
+ 
+}
+
+
+.topnav {
+    width: 70%;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/*-------------Logo---------------*/
+
+
+
+.logo {
+    display: flex;
+    cursor: pointer;
+    background-color: #0099ff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5em;
+    border-radius: 50%;
+    transition: 1s ease;
+    height: 1.2em;
+    width: 1.2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo:hover {
+    background-color: cyan;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+
+/*------------NavLink-------------*/
+
+.navlink {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding-right: 1rem;
+    letter-spacing: 0.5px;
+    transition: .2s ease-in;
+}
+
+a.navlink:hover,
+a.navlink:active {
+    color: #0099ff;
+    font-size: 2rem;
+}
+
+.lastnavlink {
+    padding-right: .5rem;
+}
+
+/*---------------------About Me---------------------*/
+
+.about {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+#intro {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+/*---------------------Projects---------------------*/
+
+.projects-container {
+    box-sizing: border-box;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 4rem 0;
+    justify-items: start;
+}
+
+.project-main-header {
+    font-size: 2rem;
+    margin-bottom: 7.5rem;
+}
+
+/*--------------Project 1-------------*/
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+
+.project-header {
+    font-size: 1.75rem;
+    transition: .5s ease-in;
+}
+
+.project-image {
+    max-width: 100%;
+    width: 80%;
+    height: 80%;
+    margin-top: 2rem;
+    transition: .5s ease-in;
+}
+
+.project:hover .project-header {
+    color: #0099ff;
+}
+
+.project:hover .project-image {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 14px rgba(93, 93, 93, 0.424);
+}
+
+.project-description-container {
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 20rem;
+    opacity:0
+}
+
+
+.project-description {
+    list-style-position: inside;
+    list-style-type: none;
+    font-size: 2rem; 
+    
+}
+
+.project-description > li {
+    margin-bottom: 5rem;
+    line-height: 1.7;
+}
+
+.project:hover .project-description-container{
+    animation: slideToRight .7s  ease-in;
+    animation-fill-mode: forwards;
+}
+
+.project li {
+    transition: .2s ease-in;
+}
+
+.project:hover li:hover {
+    color: #0099ff;
+}
+
+@keyframes slideToRight{
+    0%{
+        transform: translateX(-3rem);
+        opacity: 0;
+    }
+    60%{
+        transform: translateX(0);
+        
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }  
+}
+
+/*---------------------Contact---------------------*/
+
+/*-------------Contact Main------------*/
+
+
+footer {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+#contact-main-header {
+    display: inline;
+    font-size: 2rem;
+}
+
+/*-------------Contact List------------*/
+
+#contact-main-header:hover {
+    color: #0099ff;
+    transition: all .2s ease;
+}
+
+#contact-list-container {
+    margin-top:2rem;
+    
+}
+
+.contact_list {
+    list-style-type: none;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.contact_list-item{
+    margin-bottom: 1em;
+}
+
+
+
+/*----------ContactIcons---------*/
+
+.contact-icon-container {
+    display: inline-flex;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0;
+    transition: .4s linear;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icon-container::before, .contact-icon-container::after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .4s linear;
+}
+/*---------GithubIcons-------*/
+
+#github-icon {
+    transition: .4s linear;
+}
+
+#github-icon:hover {
+    color:#6cc644;
+}
+
+#github-icon::before, #github-icon::after {
+    transition: .4s linear;
+}
+
+#github-icon:hover::before, #github-icon:hover::after {
+    color:#6cc644;
+}
+
+/*---------LinkedInIcon-------*/
+
+#linkedin-icon {
+    transition: .4s linear;
+}
+
+#linkedin-icon:hover {
+    color:#0e76a8;
+}
+
+#linkedin-icon::before, #linkedin-icon::after {
+    transition: .4s linear;
+}
+
+#linkedin-icon:hover::before, #linkedin-icon:hover::after {
+    color:#0e76a8;
+}
+
+/*---------EmailIcon-------*/
+
+#email-icon {
+    transition: .4s linear;
+}
+
+#email-icon:hover {
+    color:blue;
+}
+
+#email-icon::before, #email-icon::after {
+    transition: .4s linear;
+}
+
+#email-icon:hover::before, #email-icon:hover::after {
+    color:blue;
+}
+
+/*-------GeneralContactIcons-------*/
+
+.contact-icon-container:hover {
+    transform: scale(.8);
+}
+
+.contact-icon-container:hover::before {
+    border-left: 2px solid;
+    border-right: 2px solid;
+    transform: skewX(20deg);
+}
+
+.contact-icon-container:hover::after {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    transform: skewY(-20deg);
+}
+
+
+/*---------------------@Media---------------------*/
+
+@media only screen and (max-width : 2200px) {
+    .project-description-container {
+        padding-right: 0;
+    }
+    .project-description > li {
+        
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (max-width : 1700px) {
+    .project-description > li {
+        font-size: 1.7rem;
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (max-width : 1400px) {
+    .project-description > li {
+        margin-bottom: 3rem;
+    }
+}
+
+@media only screen and (max-width : 1400px) {
+    .about {
+        margin-top: 6rem;
+    }
+
+    .project-description > li {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width : 1024px) {
+    .about {
+        margin-top: 8rem;
+    }
+
+    .project {
+        text-align: center; 
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .project-main-header {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .contact_list-item {
+        display: inline-block;
+        margin: 1rem 2rem 0rem 2rem;
+    
+    }
+
+    .project:hover .project-description-container{
+        animation: slideDown .7s  ease-in;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .project {
+        margin-bottom: 1rem;
+    }
+
+    .contact_list-item {
+        display: block;
+    }
+}
+
+
+@keyframes slideDown {
+    0%{
+        transform: translateY(-3rem);
+        opacity: 0;
+    }
+    60%{
+        transform: translateY(0);
+        
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }  
+}

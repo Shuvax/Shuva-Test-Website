@@ -473,10 +473,15 @@ footer {
         margin: 1rem 2rem 0rem 2rem;
     
     }
+  
+    .project-description-container {
+        opacity: 1;
+    }
 
     .project:hover .project-description-container{
         animation: slideDown .7s  ease-in;
         animation-fill-mode: forwards;
+        
     }
 }
 

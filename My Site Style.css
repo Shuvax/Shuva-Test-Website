@@ -471,7 +471,10 @@ footer {
     .contact_list-item {
         display: inline-block;
         margin: 1rem 2rem 0rem 2rem;
+    }
     
+    .project-description-container {
+        opacity: 1;
     }
   
     .project-description-container {
